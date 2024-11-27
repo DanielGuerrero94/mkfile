@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "useUnknownInCatchVariables": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true
+  },
+  "name": "${"packageScope"}/${"packageName"}",
+  "version": "0.0.0",
+  "license": "MIT",
+  "tasks": {
+    "dev": "deno run --watch mod.ts",
+    "start": "deno run mod.ts"
+  },
+  "lint": {
+    "rules": {
+      "include": [
+        "camelcase",
+        "no-sync-fn-in-async-fn",
+        "single-var-declarator",
+        "verbatim-module-syntax"
+      ]
+    }
+  },
+  "exports": "./mod.ts",
+  "imports": {
+    "@std/testing": "jsr:@std/testing@^1.0.5"
+  }
+}
